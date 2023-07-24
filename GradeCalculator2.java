@@ -21,5 +21,6 @@ public class GradeCalculator2 {
         } else {
             System.out.println("Grade: F");
         }
+        scanner.close();
     }
 }
