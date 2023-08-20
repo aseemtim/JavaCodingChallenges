@@ -124,3 +124,15 @@ public class PractiseJdbc {
 		}
 	}
 }
+//Output
+//Connection established
+//Table created if didn't exist
+//Record inserted successfully
+//Record inserted successfully
+//Record inserted successfully
+//101	Toyota	TOY	Japan
+//102	Tesla	TES	USA
+//103	Volkswagen	VOL	Germany
+//Record with name Tesla deleted successfully.
+//101	Toyota	TOY	Japan
+//103	Volkswagen	VOL	Germany
