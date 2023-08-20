@@ -1,0 +1,21 @@
+#week5day3
+#1 Display authors along with the total number of times their books have been borrowed.
+SELECT a.author_name, COUNT(b.author_id) as 'borrowed_count'
+FROM authors a
+JOIN book_loans b
+  ON a.id = b.author_id
+GROUP BY a.author_name;
+
+#2 List authors who haven't written any books in the database.
+SELECT a.author_name FROM authors a
+LEFT JOIN books b
+  ON a.id = b.author_id
+GROUP BY a.author_name
+HAVING COUNT(b.author_id) < 1;
+
+#3 List the books borrowed by a specific student . (any student name here ,that is present in db)
+SELECT bl.student_name, b.book_name from book_loans bl
+JOIN books b
+ ON bl.book_id = b.id
+GROUP BY bl.student_name, b.book_name
+HAVING student_name = "Walter White"; #Student name from my own insertions
